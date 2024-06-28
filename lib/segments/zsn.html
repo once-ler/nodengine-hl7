@@ -1,0 +1,198 @@
+<a href="https://support.hyland.com/r/Other/Epic-Chart-Search/1.0/Epic-Chart-Search/Technical-Design/Technical-Design/Workflow">Source for this page.</a>
+<div class="readercontent-topics-group" data-topic-group-id="NGN3z_Y45_Wdn5xOeFVfWw"><div><article id="NGN3z_Y45_Wdn5xOeFVfWw" data-contentid="74CvSbVkNe8WceOMmfWVWQ" class="readercontent-topic readercontent-topic-depth-4 readercontent-topic-with-highlight readercontent-loaded readercontent-visible-topic" style=""><section class="title readercontent-title-with-context-menu"><div class="depth-4 content-locale-en-US" lang="en-US"><h4>HL7 Template</h4><div class="readercontent-topic-actions"><button type="button" class="ft-btn ft-btn-no-border context-menu-button-entry ft-btn-square readercontent-quick-topic-action" title="" aria-label="Share URL" data-context-menu="SHARE_URL"><i class="ft-icon ft-icon-share-url" aria-hidden="true"></i><span class="ft-btn-inner-text">Share URL</span><div class="tooltip-bottom tooltip" aria-hidden="true" style="left: 597px; top: 328px;"><span class="gwt-InlineLabel">Share URL</span></div></button></div></div></section><section class="topic"><div class="content-locale-en-US content-locale-en depth-4"><div id="lne1689956384657"><div class="body conbody">
+		    <p class="p">The following HL7 Template is used by the <span class="keyword">Integration for Epic Chart Search</span>:</p>
+
+		    
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="lne1689956384657__table_chs_nb5_2yb" rules="all" summary=""><colgroup><col style="width:25%"><col style="width:25%"><col style="width:25%"><col style="width:25%"></colgroup><thead class="thead" style="text-align:left;">
+					          <tr class="row">
+						            <th class="entry cellrowborder" id="d9626e53" style="vertical-align:top;">Template Name</th>
+
+						            <th class="entry cellrowborder" id="d9626e56" style="vertical-align:top;">Message Direction</th>
+
+						            <th class="entry cellrowborder" id="d9626e59" style="vertical-align:top;">Message Type</th>
+
+						            <th class="entry cellrowborder" id="d9626e62" style="vertical-align:top;">Segments</th>
+
+					          </tr>
+
+				        </thead>
+<tbody class="tbody">
+					          <tr class="row">
+						            <td class="entry cellrowborder" headers="d9626e53 " style="vertical-align:top;">Epic T08 - Chart Search Notify</td>
+
+						            <td class="entry cellrowborder" headers="d9626e56 " style="vertical-align:top;">Outbound</td>
+
+						            <td class="entry cellrowborder" headers="d9626e59 " style="vertical-align:top;">MDM^T08</td>
+
+						            <td class="entry cellrowborder" headers="d9626e62 " style="vertical-align:top;">
+							              <ul class="ul" id="lne1689956384657__ul_lxw_qb5_2yb">
+								                <li class="li">MSH</li>
+
+								                <li class="li">EVN</li>
+
+								                <li class="li">PID</li>
+
+								                <li class="li">PV1</li>
+
+								                <li class="li">TXA</li>
+
+								                <li class="li">OBX</li>
+
+								                <li class="li">ZSN</li>
+
+							              </ul>
+
+						            </td>
+
+					          </tr>
+
+				        </tbody>
+</table>
+</div>
+<div class="readercontent-topics-group" data-topic-group-id="awX5o7jSoVmwpPRLNBrUkg"><div><article id="awX5o7jSoVmwpPRLNBrUkg" data-contentid="1BDYVmyt2hqvK9fAGpKZBg" class="readercontent-topic readercontent-topic-depth-4 readercontent-topic-with-highlight readercontent-loaded readercontent-visible-topic" style=""><section class="title readercontent-title-with-context-menu"><div class="depth-4 content-locale-en-US" lang="en-US"><h4>ZSN Segment</h4><div class="readercontent-topic-actions"><button type="button" class="ft-btn ft-btn-no-border context-menu-button-entry ft-btn-square readercontent-quick-topic-action" title="" aria-label="Share URL" data-context-menu="SHARE_URL"><i class="ft-icon ft-icon-share-url" aria-hidden="true"></i><span class="ft-btn-inner-text">Share URL</span><div class="tooltip-bottom tooltip" aria-hidden="true" style="left: 259px; top: 501px;"><span class="gwt-InlineLabel">Share URL</span></div></button></div></div></section><section class="topic"><div class="content-locale-en-US content-locale-en depth-4"><div id="psy1689956385702"><div class="body conbody">
+		    <p class="p">A new custom segment (ZSN) is added to the outbound Epic MDM^T08 template that contains
+			information for the chart search binary data change notification. The ZSN segment must
+			follow the OBX segment in the MDM^T08 template and only contains one value needed for
+			the notification to Epic.</p>
+
+		    
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0" class="table" frame="border" id="psy1689956385702__table_otl_5b5_2yb" rules="all" summary=""><colgroup><col style="width:7.575757575757576%"><col style="width:15.151515151515152%"><col style="width:17.424242424242422%"><col style="width:19.6969696969697%"><col style="width:40.151515151515156%"></colgroup><thead class="thead" style="text-align:left;">
+					          <tr class="row">
+						            <th class="entry cellrowborder" id="d8390e53" style="vertical-align:top;">Field</th>
+
+						            <th class="entry cellrowborder" id="d8390e56" style="vertical-align:top;">Description</th>
+
+						            <th class="entry cellrowborder" id="d8390e59" style="vertical-align:top;">Static Value</th>
+
+						            <th class="entry cellrowborder" id="d8390e62" style="vertical-align:top;">Example Value</th>
+
+						            <th class="entry cellrowborder" id="d8390e65" style="vertical-align:top;">Additional Information</th>
+
+					          </tr>
+
+				        </thead>
+<tbody class="tbody">
+					          <tr class="row">
+						            <td class="entry cellrowborder" headers="d8390e53 " style="vertical-align:top;">1</td>
+
+						            <td class="entry cellrowborder" headers="d8390e56 " style="vertical-align:top;">Specialty</td>
+
+						            <td class="entry cellrowborder" headers="d8390e59 " style="vertical-align:top;">&nbsp;</td>
+
+						            <td class="entry cellrowborder" headers="d8390e62 " style="vertical-align:top;">&nbsp;</td>
+
+						            <td class="entry cellrowborder" headers="d8390e65 " style="vertical-align:top;">Not Used</td>
+
+					          </tr>
+
+					          <tr class="row">
+						            <td class="entry cellrowborder" headers="d8390e53 " style="vertical-align:top;">2</td>
+
+						            <td class="entry cellrowborder" headers="d8390e56 " style="vertical-align:top;">Subspecialty</td>
+
+						            <td class="entry cellrowborder" headers="d8390e59 " style="vertical-align:top;">&nbsp;</td>
+
+						            <td class="entry cellrowborder" headers="d8390e62 " style="vertical-align:top;">&nbsp;</td>
+
+						            <td class="entry cellrowborder" headers="d8390e65 " style="vertical-align:top;">Not Used</td>
+
+					          </tr>
+
+					          <tr class="row">
+						            <td class="entry cellrowborder" headers="d8390e53 " style="vertical-align:top;">3</td>
+
+						            <td class="entry cellrowborder" headers="d8390e56 " style="vertical-align:top;">Document Status</td>
+
+						            <td class="entry cellrowborder" headers="d8390e59 " style="vertical-align:top;">&nbsp;</td>
+
+						            <td class="entry cellrowborder" headers="d8390e62 " style="vertical-align:top;">&nbsp;</td>
+
+						            <td class="entry cellrowborder" headers="d8390e65 " style="vertical-align:top;">
+							              <p class="p">Not Used</p>
+
+							              <p class="p">When ZSN-3 is not received, the scan status is retained (for update
+								messages), and is defaulted based on system settings.</p>
+
+							              <p class="p">
+                        <span class="ph uicontrol">Profile Variables</span>
+                     </p>
+
+							              <ul class="ul" id="psy1689956385702__ul_jsl_zb5_2yb">
+								                <li class="li">DOCUMENT_STATUS_TABLE [68812]</li>
+
+							              </ul>
+
+							              <p class="p">
+                        <span class="ph uicontrol">Errors</span>
+                     </p>
+
+							              <ul class="ul" id="psy1689956385702__ul_ksl_zb5_2yb">
+								                <li class="li">INVALID DOCUMENT STATUS [663]</li>
+
+							              </ul>
+
+							              <p class="p">
+                        <span class="ph uicontrol">Database Location</span>
+                     </p>
+
+							              <ul class="ul" id="psy1689956385702__ul_lsl_zb5_2yb">
+								                <li class="li">DOCUMENT STATUS (I DCS 110)</li>
+
+							              </ul>
+
+						            </td>
+
+					          </tr>
+
+					          <tr class="row">
+						            <td class="entry cellrowborder" headers="d8390e53 " style="vertical-align:top;">4</td>
+
+						            <td class="entry cellrowborder" headers="d8390e56 " style="vertical-align:top;">Transaction ID</td>
+
+						            <td class="entry cellrowborder" headers="d8390e59 " style="vertical-align:top;">&nbsp;</td>
+
+						            <td class="entry cellrowborder" headers="d8390e62 " style="vertical-align:top;">&nbsp;</td>
+
+						            <td class="entry cellrowborder" headers="d8390e65 " style="vertical-align:top;">Not Used</td>
+
+					          </tr>
+
+					          <tr class="row">
+						            <td class="entry cellrowborder" headers="d8390e53 " style="vertical-align:top;">5</td>
+
+						            <td class="entry cellrowborder" headers="d8390e56 " style="vertical-align:top;">Binary Data Update Instant</td>
+
+						            <td class="entry cellrowborder" headers="d8390e59 " style="vertical-align:top;">$$TIMESTAMP</td>
+
+						            <td class="entry cellrowborder" headers="d8390e62 " style="vertical-align:top;">20230119064221</td>
+
+						            <td class="entry cellrowborder" headers="d8390e65 " style="vertical-align:top;">
+							              <p class="p">This field contains the date and time the binary data for the scan or
+								image was last updated.</p>
+
+							              <p class="p">This date and time is evaluated for external scans, such as those
+								from a document management system.</p>
+
+							              <p class="p">Epic compares the ZSN-5 date with the date that is already stored in
+								Epic. If the ZSN-5 date is newer, Epic then uses the Binary Data
+								Retrieval API to get the latest document binary data.</p>
+
+							              <p class="p">The <span class="ph uicontrol">$$TIMESTAMP</span> value contains the date and
+								time the HL7 message was sent.</p>
+
+						            </td>
+
+					          </tr>
+
+				        </tbody>
+</table>
+</div>
+
+	  </div>
+
+</div></div></section></article></div></div>
+
+	  </div>
+
+</div></div></section></article></div></div>
+
